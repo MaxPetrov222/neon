@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+
+{% block TITLEPAGE %}Главная страница{% endblock %}
+
+{% block content %}
+	
+	<div class="card">
+	  <ul class="list-group list-group-flush">
+	  	{% for a in global_data.allproduct %}
+		    <li class="list-group-item">
+		    	<div class="row">
+		    		<div class="col">{{ a.name }}</div>
+		    		<div class="col">{{ a.short_description }}</div>
+		    		<div class="col-2"><a href="/{{ a.id }}">Купить за: {{ a.price }}</a></div>
+		    	</div>
+		    </li>
+		{% endfor %}
+	  </ul>
+	</div>
+
+{% endblock %}

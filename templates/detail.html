@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+
+{% block TITLEPAGE %}Товар: {{ data.name }}{% endblock %}
+
+{% block content %}
+
+	<div class="card card-padding">
+		<p>Название: {{ data.name }}</p>
+		<p>Описание: {{ data.description }}</p>
+		<p>Стоимость: {{ data.price }}</p>
+	</div>
+
+{% endblock %}
